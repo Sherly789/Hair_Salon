@@ -1,6 +1,6 @@
-#### _Hair Salon with C#, Nancy, and Razor_
+## _Hair Salon with C#, Nancy, and Razor_
 
-#### _Project Specifications_
+## _Project Specifications_
 
 #### By _**Shokouh Farvid**_
 
