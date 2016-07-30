@@ -24,7 +24,7 @@ namespace HairSalon
     }
 
     [Fact]
-    public void Test_Equal_ReturnsTrueIfNameAreTheSame()
+    public void Test2_Equal_ReturnsTrueIfNameAreTheSame()
     {
       //Arrange, Act
       Stylist firstStylist = new Stylist("Sara");
@@ -35,7 +35,7 @@ namespace HairSalon
     }
 
     [Fact]
-    public void Test_Save_AssignsIdToObject()
+    public void Test3_Save_AssignsIdToObject()
     {
       //Arrange
       Stylist testStylist = new Stylist("Sara");
@@ -49,6 +49,20 @@ namespace HairSalon
 
       //Assert
       Assert.Equal(testId, result);
+    }
+
+    [Fact]
+    public void Test4_Find_FindsStylistInDatabase()
+    {
+      //Arrange
+      Stylist testStylist = new Stylist("Sara");
+      testStylist.Save();
+
+      //Act
+      Stylist foundStylist = Stylist.Find(testStylist.GetId());
+
+      //Assert
+      Assert.Equal(testStylist, foundStylist);
     }
 
     public void Dispose()
